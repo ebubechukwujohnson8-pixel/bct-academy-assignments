@@ -1,4 +1,4 @@
-const score = 40;
+const score = 80;
 if (score < 0 || score > 100) {
     console.log("Invalid score");
 } else if (score >= 70 && score <= 100) {
