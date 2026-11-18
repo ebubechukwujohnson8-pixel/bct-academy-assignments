@@ -1,0 +1,59 @@
+.section{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+.card-1{
+    height: 30%;
+    width: 30%;
+    background-color: gray;
+    color: white;
+}
+.card-2{
+    height: 30%;
+    width: 30%;
+    background-color: antiquewhite;
+    color: blue;
+}
+.card-3{
+    height: 30%;
+    width: 30%;
+    background-color: black;
+    color: red;
+}
+
+@media (min-width:600px){
+    .section{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card-1{
+        background-color: brown;
+        color: chartreuse;
+    }
+    .card-2{
+        background-color: blue;
+        color: beige;
+    }
+    .card-3 {
+        background-color: cornflowerblue;
+        color: blueviolet;
+    }
+}@media (min-width:900px){
+    .section{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card-1{
+        background-color: brown;
+        color: chartreuse;
+    }
+    .card-2{
+        background-color: blue;
+        color: beige;
+    }
+    .card-3 {
+        background-color: cornflowerblue;
+        color: blueviolet;
+    }
+}

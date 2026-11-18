@@ -1,0 +1,173 @@
+/* 1a. where should display: flex be applied? */
+/* answer: On the parents container */
+
+/* 1b. with flex-direction: row, which property aligns items along the cross axis */
+/* answer: align-items */
+
+/* 1c. what does flex-wrap: wrap allow? */
+/* answer: Items to move onto additional lines */
+
+/* 1d. What does flex: 1 generally do for sibling items? */
+/* answer: Gives each an equal share of available free space */
+
+/* 1e. Which property can push one navigation item to the far end? */
+/* answer: margin-left: auto*/
+
+/* 2. A navigation bar must show a logo on the left and navigation links on the right, with all items vertically centred. 
+Write CSS for the header and navigation list. Include a gap between links.  */
+/* answer: header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+} */
+
+/* 3. Explain the difference between justify-content and align-items when flex-direction is row.  */
+/* answer: .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+/* 4. 4. Study the code. Identify TWO issues or unnecessary declarations and explain how you would correct them.
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+  gap: 1rem;
+}
+.card-footer .btn { display: flex; }
+ */
+ /* answer: .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+} */
+
+/* 5.State one reason to use flex-wrap and one situation where Flexbox is a suitable layout choice.  */
+/* answer:Reason to use flex-wrap:
+
+flex-wrap allows items to move onto a new line when there is not enough space in the container. */
+/* answer: Situation where Flexbox is suitable:
+
+Flexbox is suitable for creating a navigation bar where the logo is on the left and navigation links are on the right,
+ with all items vertically centred. */
+
+ /* SECTION B */
+ /* 6a.In CSS Grid, what does the fr unit represent?  */
+ /* answer: the fr unit represents a fraction of the available free space in a grid container. */
+
+ /* 6b. What is the effect of repeat(3, 1fr)?  */
+ /* answer: 3 equal-sized columns, each taking up 1 fraction of the available space. */
+
+ /* 6c.Explain what minmax(200px, 1fr) means.  */
+ /* answer: it defines a column or row with a minimum size of 200px and a maximum size of 1fr. */
+
+ /* 6d. State TWO examples of layouts for which Grid is especially suitable */
+ /* answer:Website page layouts: Creating headers, sidebars, main content areas, and footers.
+   Image galleries: Arranging images into multiple rows and columns */
+
+ /* 7.Write CSS for a card gallery that automatically creates as many columns as can fit, 
+   with each column at least 240px wide and remaining space shared equally. Include a gap of 1.5rem. */
+   /* answer: .card-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+} */
+
+/* 8.A page contains a header, main content, sidebar and footer.
+ Describe how grid-template-areas and grid-area can arrange these regions. Include a simple CSS example. */
+ /* answer:CSS Grid uses grid-template-areas to define the layout of a webpage by naming different sections.
+  while grid-area assigns each section to its named position. */
+
+  /* 9.Choose Flexbox or Grid for each scenario and justify your choice briefly. (3 × 2 = 6 marks)
+a) A navbar with a logo at one end and links at the other.
+b) A dashboard with main content and sidebar arranged in rows and columns.
+c) A row of filter chips that should wrap onto new lines */
+/* answer: pls i don't understand this one */
+
+/* 10.Explain the purpose of the viewport meta tag below and describe what can happen on a mobile device if it is omitted. 
+<meta name="viewport" content="width=device-width, initial-scale=1"> */
+/* answer: The viewport meta tag tells the browser how to control the size and scaling of a webpage on different devices,
+ especially mobile phones. */
+ /* answer:1.Text and images may appear too small.
+   2. Users may need to zoom in and scroll horizontally to read the content. */
+
+   /* 11.Define mobile-first design. Then write CSS for a card grid with one column by default,
+    two columns at a minimum width of 600px, and three columns at a minimum width of 900px.  */
+    /* answer: mobile-first-design means you can write the styles for the smallest screen first. */
+    /* answer:/* Default: Mobile devices */
+/* .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+  Screens 600px and above 
+@media (min-width: 600px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+  Screens 900px and above 
+@media (min-width: 900px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+ 
+/* 12. Write a responsive image rule that prevents an image exceeding its container while preserving its proportions. 
+Explain the purpose of aspect-ratio and object-fit: cover for card images. */
+/* answer: img {
+    max-width: 100%;
+    height: auto;
+} */
+ /* answer:aspect-ratio:
+Helps card images maintain a consistent shape and size.
+object-fit: cover:
+Makes an image completely fill its container. */
+
+/* 13.A page scrolls horizontally on a 360px-wide phone. Give an appropriate fix for EACH issue. (8 marks)
+a) An element has width: 500px.
+b) An image has no maximum-width rule.
+c) A long URL or word extends beyond its container.
+d) An element uses width: 100vw and creates a small overflow.
+ */
+ /* answer: a.element {
+  width: 100%;
+  max-width: 500px;
+} */
+ /* answer:b.img {
+  max-width: 100%;
+  height: auto;
+} */
+ /* answer:c.container {
+  overflow-wrap: break-word;
+} */
+ /* answer:d.element {
+  width: 100%;
+} */
+
+/* 14.Explain how srcset and sizes help responsive images. State the purpose of width and height attributes and loading="lazy".  */
+/* answer: srcset: Allows you to provide multiple image versions with different resolutions or widths.
+sizes: Tells the browser how much space the image is expected to occupy at different screen sizes.
+Purpose of width and height Attributes
+- They specify the image's width and height.
+- They help the browser reserve space for the image before it loads.
+Purpose of loading="lazy"
+- It delays loading an image until it is close to entering the visible screen area.
+- It helps improve page loading speed. */
+
+/* 15. . State TWO design considerations from the guide that improve usability on touch devices or respect user preferences. */
+/* answer: Touch-friendly controls: Buttons and links should have sufficiently large clickable areas and enough spacing to make them easy to 
+tap on touchscreens.
+Respect user preferences: Use CSS media queries such as prefers-reduced-motion to reduce animations for users who prefer less movement. */
